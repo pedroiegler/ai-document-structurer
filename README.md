@@ -50,24 +50,26 @@ Pipeline Architecture — sequência de etapas independentes onde a saída de um
 
 ## Estrutura do Projeto
 
+```text
 ai-document-structurer/
 ├── app/
 │   ├── api/
 │   │   └── routes.py          # endpoints da API
 │   ├── pipeline/
 │   │   ├── preprocessor.py    # limpeza e normalização do texto
-│   │   ├── extractor.py       # extração via LLM com Factory Pattern
-│   │   └── validator.py       # validação e limpeza da saída
+│   │   ├── extractor.py       # extração via LLM
+│   │   └── validator.py       # validação da saída
 │   └── schemas/
-│       └── extraction.py      # contrato de dados (entrada e saída)
+│       └── extraction.py
 ├── tests/
 │   ├── test_preprocessor.py
 │   ├── test_validator.py
 │   ├── test_schemas.py
 │   └── test_api.py
-├── main.py                    # inicialização da aplicação
+├── main.py
 ├── Dockerfile
 └── requirements.txt
+```
 
 ## Padrões de Projeto Aplicados
 
