@@ -44,7 +44,7 @@ Pipeline Architecture — sequência de etapas independentes onde a saída de um
 - **FastAPI** — API REST
 - **Pydantic** — validação de schema e contrato de dados
 - **LangChain** — orquestração do LLM
-- **Google Gemini 2.5 Flash** — modelo de linguagem para extração
+- **Google Gemini 2.5 Flash** — LLM para NER via inferência (Structured Output + Prompt Engineering)
 - **pytest** — testes automatizados
 - **Docker** — containerização
 
@@ -57,10 +57,10 @@ ai-document-structurer/
 │   │   └── routes.py          # endpoints da API
 │   ├── pipeline/
 │   │   ├── preprocessor.py    # limpeza e normalização do texto
-│   │   ├── extractor.py       # extração via LLM
+│   │   ├── extractor.py       # NER via LLM com Structured Output e Prompt Engineering
 │   │   └── validator.py       # validação da saída
 │   └── schemas/
-│       └── extraction.py
+│       └── extraction.py     
 ├── tests/
 │   ├── test_preprocessor.py
 │   ├── test_validator.py
